@@ -1,5 +1,8 @@
 $(document).ready(function(){
-	console.log("Doc is ready!")
+	
+	//var datetimeNow = mew Date();
+
+
 
 	$('#border-wait-form').submit(function(event){
 		event.preventDefault();
@@ -15,14 +18,30 @@ $(document).ready(function(){
 	    var daljeMinMetra =$ ('#dalje-min-metra').val();
 	    var daljeMaxMetra =$ ('#dalje-max-metra').val();
 
-	    console.log(hyrjeMinMinuta)
-	    console.log(hyrjeMaxMinuta)
-	    console.log(daljeMinMinuta)
-	    console.log(daljeMaxMinuta)
-	    console.log(hyrjeMinMetra)
-	    console.log(hyrjeMaxMetra)
-	    console.log(daljeMinMetra)
-	    console.log(daljeMaxMetra)
-		
+
+	    // console.log(hyrjeMinMinuta)
+	    // console.log(hyrjeMaxMinuta)
+	    // console.log(daljeMinMinuta)
+	    // console.log(daljeMaxMinuta)
+	    // console.log(hyrjeMinMetra)
+	    // console.log(hyrjeMaxMetra)
+	    // console.log(daljeMinMetra)
+	    // console.log(daljeMaxMetra)
+
+	    var dataJson ={};
+	    dataJson["pikaKufitare"] =  pikaKufitare;
+	    dataJson["hyrjeMinMinuta"] = parseInt hyrjeMinMinuta;
+	    dataJson["hyrjeMaxMinuta"] = parseInt hyrjeMaxMinuta;
+	    dataJson["daljeMinMinuta"] = parseInt daljeMinMetra;
+	    dataJson["daljeMaxMinuta"] = parseInt daljeMaxMinuta;
+	    dataJson["hyrjeMinMetra"] =  parseInt hyrjeMinMetra;
+	    dataJson["hyrjeMaxMetra"] =  parseInt hyrjeMaxMetra;
+	    dataJson["daljeMinMetra"] =  parseInt daljeMinMetra;
+	    dataJson["daljeMaxMetra"] =  parseInt daljeMaxMetra;
+	    dataJson["datetimeNow"] = new Date();
+
+	    console.log(dataJson);
+ 
+
 	});
 });
